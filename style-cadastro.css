@@ -1,0 +1,96 @@
+header{
+    background: powderblue;
+    padding: 20px 0;
+}
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+.logo-padrao{
+    width: 200px;
+}
+nav{
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+nav li{
+    display: inline;
+    padding: 0 20px;
+    border-left: 2px solid midnightblue;
+}
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: purple;
+    text-decoration: underline;
+}
+body{
+    background: rgb(245, 245, 247);
+}
+.caixa-formulario{
+    background: #fff;
+    width: 940px;
+    margin: 40px auto;
+    padding: 20px;
+    border: solid 2px lightgray;
+    border-radius: 8px;
+} 
+.cabecalho-formulario h1{
+    font-size: 200%;
+    font-weight: bold;
+}
+.cabecalho-formulario h2{
+    font-size: 120%;
+    border-bottom: lightgray solid 1px;
+    padding: 8px 0;
+    margin-bottom: 20px;
+}
+.formulario-cadastro label, legend{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 105%;
+    font-weight: bold;
+}
+.input-padrao{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+.plano-saude{
+    margin: 20px 0 0 0;
+}
+.botao-enviar{
+    display: block;
+    margin: 25px auto;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1S all;
+}
+.botao-enviar a{
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+.botao-enviar:hover{
+    background: powderblue;
+    transform: scale(1.1);
+}
+footer{
+    background: powderblue;
+    text-align: center;
+    padding: 40px 0;
+}
+.copyright{
+    font-size: 16px;
+    margin: 20px 0 0;
+}

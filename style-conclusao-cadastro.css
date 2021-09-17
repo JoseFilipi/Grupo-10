@@ -1,0 +1,91 @@
+header{
+    background: powderblue;
+    padding: 20px 0;
+}
+.logo-padrao{
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+body{
+    background: rgb(245, 245, 247);
+}
+.caixa{
+    background: #fff;
+    width: 940px;
+    margin: 40px auto;
+    padding: 20px;
+    border: solid 2px lightgray;
+    border-radius: 8px;
+}
+.texto-principal{
+    text-align: center;
+}
+.texto-principal h1{
+    font-size: 220%;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+.texto-principal h2{
+    font-size: 150%;
+}
+.texto-principal strong{
+    color: dodgerblue;
+    font-weight: bold;
+}
+.aviso-login{
+    width: 440px;
+    margin: 35px auto;
+    padding: 30px 15px;
+    text-align: center;
+    border: 2px black dashed;
+}
+.aviso-login h3{
+    font-size: 170%;
+    margin-bottom: 5px;
+}
+.aviso-login p{
+    font-size: 125%;
+}
+.aviso-login em{
+    text-decoration: underline 1.25px;
+}
+.caixa-botoes{
+    position: relative;
+    width: 940px;
+    margin: 15px 0;
+    padding-top: 20px;
+}
+.botao-esquerdo{
+    margin-left: 135px;
+}
+.botao-direito{
+    position: absolute;
+    right: 135px;
+}
+.botao-direito, .botao-esquerdo{
+    width: 215px;
+    padding: 15px 20px;
+    transition: 1s all;
+}
+.caixa-botoes a{
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: bold;
+   color: black;
+   font-size: 15px;
+}
+.caixa-botoes button:hover{
+    background: powderblue;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+footer{
+    background: powderblue;
+    text-align: center;
+    padding: 40px 0;
+}
+.copyright{
+    font-size: 16px;
+    margin: 20px 0 0;
+}
