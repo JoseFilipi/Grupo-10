@@ -31,46 +31,46 @@
 					<h2>Informe seus dados pessoais abaixo:</h2>
 				</section>
 
-				<form class="formulario-cadastro"> 
+				<form class="formulario-cadastro" method="POST" action="FinalCadastroPF.php" enctype="multipart/form-data"> 
 					<label for="nome">Nome completo</label>
-					<input type="text" class="input-padrao" id="nome" required>
+					<input type="text" class="input-padrao" id="nome" name="nome" required>
 
 					<label for="data-nascimento">Data de nascimento</label>
-					<input type="date" class="input-padrao" id="data-nascimento" placeholder="00/00/0000" required>
+					<input type="date" class="input-padrao" id="data-nascimento" name="nascimento" placeholder="00/00/0000" required>
 					
 					<label for="rg">RG</label>
-					<input type="number" class="input-padrao" id="rg" required>
+					<input type="number" class="input-padrao" id="rg" name="rg" required>
 			
 					<label for="cpf">CPF</label>
-					<input type="number" class="input-padrao" id="cpf" title="Digite um CPF no formato: xxx.xxx.xxx-xx" placeholder="000.000.000-00" required>
+					<input type="number" class="input-padrao" id="cpf" name="cpf" title="Digite um CPF no formato: xxx.xxx.xxx-xx" placeholder="000.000.000-00" required>
 					
 					<label for="cep">CEP</label>
-					<input type="text" class="input-padrao" id="cep" title="Digite um CEP no formato: xxxxx-xxx" placeholder="00000-000" required>
+					<input type="text" class="input-padrao" id="cep" name="cep" title="Digite um CEP no formato: xxxxx-xxx" placeholder="00000-000" required>
 							
 					<label for="cel">Número de celular</label>
-					<input type="tel" class="input-padrao" id="cel" placeholder="(00)00000-0000" required>
+					<input type="tel" class="input-padrao" id="cel" name="cel" placeholder="(00)00000-0000" required>
 							
 					<label for="email">E-mail</label>
-					<input type="email" class="input-padrao" id="email" placeholder="exemplo@exemplo.com" required>
+					<input type="email" class="input-padrao" id="email" name="email" placeholder="exemplo@exemplo.com" required>
 					
 					<label for="emailconf">Confirme o e-mail</label>
-					<input type="email" class="input-padrao" id="emailconf" placeholder="exemplo@exemplo.com" required>
+					<input type="email" class="input-padrao" id="emailconf" name="emailconf" placeholder="exemplo@exemplo.com" required>
 					
 					<label for="senha">Crie uma senha</label>
-					<input type="password" class="input-padrao" id="senha" required>
+					<input type="password" class="input-padrao" id="senha" name="senha" required>
 
 					<label for="senhaconf">Confirme sua senha</label>
-					<input type="password" class="input-padrao" id="senhaconf" required>
+					<input type="password" class="input-padrao" id="senhaconf" name="senhaconf" required>
 		
 					<fieldset class="plano-saude">
 						<legend>Possui algum plano de saúde?</legend>
-						<label for="sim-plano-saude"><input type="radio" name="plano-saude" id="sim-plano-saude" required>Sim</label>
-						<label for="nao-plano-saude"><input type="radio" name="plano-saude" id="nao-plano-saude" required>Não</label>
+						<label for="sim-plano-saude"><input type="radio" name="plano" id="sim-plano-saude" required>Sim</label>
+						<label for="nao-plano-saude"><input type="radio" name="plano" id="nao-plano-saude" required>Não</label>
 						<input type="text" class="input-padrao" name="textoplano" placeholder="Se sim, qual?">
 					</fieldset>
 	
 					<label for="carteirinha">Número da carteirinha do plano de saúde</label>
-					<input type="number" class="input-padrao" id="carteirinha">
+					<input type="number" class="input-padrao" id="carteirinha" name="carteirinha">
 						
 					<fieldset>
 						<legend>Foto para perfil (opcional)</legend>
@@ -78,9 +78,8 @@
 						<input type="file" name="foto">
 					</fieldset>
 
-					<button class="botao-enviar" type="submit">
-						<a href="FinalCadastroPF.html">Enviar</a>
-					</button>
+					<button class="botao-enviar" type="submit">Enviar</button>
+
 				</form>
 			</div>
 		</main>			
