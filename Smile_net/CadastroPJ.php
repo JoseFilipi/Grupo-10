@@ -30,36 +30,37 @@
 					<h2>Preencha os espaços abaixo com as informações da clínica:</h2>
 				</section>
 
-				<form class="formulario-cadastro">
+				<form class="formulario-cadastro" method="POST" action="FinalCadastroPJ.php" enctype="multipart/form-data">
 					<label for="nome">Nome da clínica</label>
-					<input type="text" class="input-padrao" id="nome" required>
+					<input type="text" class="input-padrao" id="nome" name="nome" required>
 					
 					<label for="cnpj">CNPJ</label>
-					<input type="number" class="input-padrao" id="cnpj" title="Digite um CNPJ no formato: XX.XXX.XXX/XXXX-XX" placeholder="00.000.000/0000-00" required>
+					<input type="number" class="input-padrao" id="cnpj" name="cnpj" title="Digite um CNPJ no formato: XX.XXX.XXX/XXXX-XX" placeholder="00.000.000/0000-00" required>
 					
 					<label for="cep">CEP</label>
-					<input type="number" class="input-padrao" id="cep" title="Digite um CEP no formato: xxxxx-xxx" placeholder="00000-000" required>
+					<input type="number" class="input-padrao" id="cep" name="cep" title="Digite um CEP no formato: xxxxx-xxx" placeholder="00000-000" required>
 
 					<label for="endereço">Endereço</label>
-					<input type="text" class="input-padrao" id="endereço" required>
+					<input type="text" class="input-padrao" id="endereço" name="endereço" required>
 				
 					<label for="cel">Número para contato</label>
-					<input type="tel" class="input-padrao" id="cel" placeholder="(00) 00000-0000" required>
+					<input type="tel" class="input-padrao" id="cel" name="cel" placeholder="(00) 00000-0000" required>
 						
 					<label for="horario">Horário de funcionamento</label>
-					<textarea cols="70" rows="10" class="input-padrao" id="horario"></textarea>
+					<textarea cols="70" rows="10" class="input-padrao" id="horario" name="horario"></textarea>
 
 					<label for="email">E-mail</label>
-					<input type="email" class="input-padrao" id="email" placeholder="exemplo@exemplo.com" required>
+					<input type="email" class="input-padrao" id="email" name="email" placeholder="exemplo@exemplo.com" required>
 					
 					<label for="emailconf">Confirme o e-mail</label>
-					<input type="email" class="input-padrao" id="emailconf" placeholder="exemplo@exemplo.com" required>
+					<input type="email" class="input-padrao" id="emailconf" name="emailconf" placeholder="exemplo@exemplo.com" required>
 					
 					<label for="senha">Crie uma senha</label>
-					<input type="password" class="input-padrao" id="senha" required>
+					<input type="password" class="input-padrao" id="senha" name="senha" required>
 
 					<label for="senhaconf">Confirme sua senha</label>
-					<input type="password" class="input-padrao" id="senhaconf" required>
+					<input type="password" class="input-padrao" id="senhaconf" name="senhaconf" required>
+
 
 					<fieldset>
 						<legend>Foto ou Logo da clínica (opcional)</legend>
@@ -68,11 +69,11 @@
 					</fieldset>
 
 					<label for="descricao-clinica">Coloque uma descrição para a clínica</label>
-					<textarea cols="70" rows="10" class="input-padrao" id="descricao-clinica"></textarea>
+
+					<textarea cols="70" rows="10" class="input-padrao" id="descricao-clinica" name="desc"></textarea>
 						
-					<button class="botao-enviar" type="submit">
-						<a href="FinalCadastroPJ.html">Enviar</a>
-					</button>
+					<button class="botao-enviar" type="submit">Enviar</button>
+          
 				</form>
 			</div>
 		</main>

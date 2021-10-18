@@ -1,3 +1,47 @@
+<?php
+    
+   include_once("conexao.php");
+
+   $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+   $cnpj = filter_input(INPUT_POST,'cnpj', FILTER_SANITIZE_STRING);
+   $cep = filter_input(INPUT_POST, 'cep', FILTER_SANITIZE_STRING);
+   $end = filter_input(INPUT_POST, 'endereço', FILTER_SANITIZE_STRING);
+   $cel = filter_input(INPUT_POST, 'cel', FILTER_SANITIZE_STRING);
+   $horario = filter_input(INPUT_POST, 'horario', FILTER_SANITIZE_STRING);
+   $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+   $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+   $foto = $_FILES['foto']['name'];
+   $descric = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
+
+   //criptografia da senha:
+   $senha2 = password_hash($senha, PASSWORD_DEFAULT);
+  
+  // lógica de programação para salvar a imagem
+  
+  //Pasta onde o arquivo vai ser salvo
+  $_UP['pasta'] = 'fotoperfil/';
+  
+  //Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
+  $nome_final = time().'.jpg';
+  
+  //Movendo a foto
+  move_uploaded_file($_FILES['foto']['tmp_name'], $_UP['pasta']. $nome_final);
+	
+			
+
+
+   //guardando o restante das variáveis do banco de dados:
+   $result_usuario = "INSERT INTO clinicas (nome, cnpj, cep, endereco, telefone, horariofunc, email, senha, logo, descricao) VALUES ('$nome', '$cnpj', '$cep', '$end', '$cel', '$horario', '$email', '$senha2', '$nome_final', '$descric')";
+
+   //condicional para averiguar a presença de erros durante a conexão dos arquivos
+   if (mysqli_query($conn, $result_usuario)){ 
+   	echo " ";
+    } 
+    else {
+    	echo "Error: " . $result_usuario . "<br>" . mysqli_error($conn);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
