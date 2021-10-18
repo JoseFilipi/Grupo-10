@@ -66,17 +66,19 @@
 						<legend>Possui algum plano de saúde?</legend>
 						<label for="sim-plano-saude"><input type="radio" name="plano" id="sim-plano-saude" required>Sim</label>
 						<label for="nao-plano-saude"><input type="radio" name="plano" id="nao-plano-saude" required>Não</label>
+
 						<input type="text" class="input-padrao" name="textoplano" placeholder="Se sim, qual?">
 					</fieldset>
 	
 					<label for="carteirinha">Número da carteirinha do plano de saúde</label>
 					<input type="number" class="input-padrao" id="carteirinha" name="carteirinha">
-						
+
 					<fieldset>
 						<legend>Foto para perfil (opcional)</legend>
 						<img src="Imagens/avatar.png" width="100" alt="Imagem de exemplo de avatar">
 						<input type="file" name="foto">
 					</fieldset>
+
 
 					<button class="botao-enviar" type="submit">Enviar</button>
 

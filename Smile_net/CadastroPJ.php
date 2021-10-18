@@ -61,6 +61,7 @@
 					<label for="senhaconf">Confirme sua senha</label>
 					<input type="password" class="input-padrao" id="senhaconf" name="senhaconf" required>
 
+
 					<fieldset>
 						<legend>Foto ou Logo da clínica (opcional)</legend>
 						<img src="Imagens/avatar.png" width="100" alt="Imagem de exemplo de avatar">
@@ -68,9 +69,11 @@
 					</fieldset>
 
 					<label for="descricao-clinica">Coloque uma descrição para a clínica</label>
+
 					<textarea cols="70" rows="10" class="input-padrao" id="descricao-clinica" name="desc"></textarea>
 						
 					<button class="botao-enviar" type="submit">Enviar</button>
+          
 				</form>
 			</div>
 		</main>
