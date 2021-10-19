@@ -70,7 +70,7 @@
 				
 				<section class="caixa-botoes">
 					<button class="botao-esquerdo">
-						<a href="">Página principal</a>
+						<a href="index.php">Página principal</a>
 					</button>
 	
 					<button class="botao-direito">
@@ -82,7 +82,7 @@
 		
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
 		</footer>
 	</body>
 </html>

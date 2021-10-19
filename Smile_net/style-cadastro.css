@@ -72,10 +72,14 @@ body{
     margin: 25px auto;
     padding: 10px 25px;
     border-radius: 5px;
-    font-weight: bold;
-    font-size: 22px;
     cursor: pointer;
     transition: 1S all;
+}
+.botao-enviar a{
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
 }
 .botao-enviar:hover{
     background: powderblue;
