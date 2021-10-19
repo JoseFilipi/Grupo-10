@@ -72,11 +72,11 @@
 				
 				<section class="caixa-botoes">
 					<button class="botao-esquerdo">
-						<a href="">Página principal</a>
+						<a href="areaPrivada_pf.php">Página principal</a>
 					</button>
 	
 					<button class="botao-direito">
-						<a href="">Procurar clínicas</a>
+						<a href="PaginaClinicas.php">Procurar clínicas</a>
 					</button>
 				</section>
 					
