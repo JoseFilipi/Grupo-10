@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
 
     <head>
         <title>Página de alteração de dados</title>
         <meta charset="utf-8">
+
+         <!-- CSS -->           <!-- VÁRIOS HREF'S -->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap.min.css">
+
     </head>
 
     <body>
+           <header class="topo">
+            <div class="caixa">
+                <h1><img src="Imagens/logo2.png"></h1>
 
-        <table border="0" width="100%">
-            <tr>
-                <td align="center"><img src="imagens/Logo.jpeg" width="230"></td>
-            </tr>
-        </table>
-        <br><br>
+                <nav>
+                    <ul>        <!-- VÁRIOS HREF'S SAIR-->
+                        <li><a href="AlteraDadosBasicosPJ.php">Dados básicos</a></li>
+						<li><a href="PacientesFichasDosPacientes.php">Pacientes: Fichas dos Pacientes</a></li>
+						<li><a href="historicoFichasdeAnamnese.php">Fichas de Anamnese</a></li>
+						<li><button><a href="logar.php"><strong>Sair</strong></a></button></li>
+                        </ul>
+                </nav>
+            </div>
+        </header>
 
         <hr>
         <p>Caso suas informações estejam desatualizadas ou necessitem de trocas devido algum erro de digitação, você pode troca-las preenchendo os dados abaixo novamente; só não se esqueça de colocar os dados corretos pois seu CNPJ está vinculado a alguns dados seus, caso esses dados não correspondam, problemas futuros poderão ser gerados!</p>
@@ -113,7 +127,7 @@
         <br><br>
 
         <button>
-            <a href="">Concluir atualização de dados</a> <!--Colocar o link da página: conclusão de atualização de dados PJ-->
+            <a href="">Concluir atualização de dados</a>
         </button>
 
     </body>

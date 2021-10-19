@@ -2,7 +2,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Clínicas</title>
+		<title>Fichas dos Pacientes</title>
 		
 		 <!-- CSS -->
 		 <link rel="stylesheet" href="reset.css">
@@ -19,18 +19,17 @@
 
 				<nav>
 					<ul>		<!-- VÁRIOS HREF'S -->
-						<li><a href="AlterarDadosPF.php.">Alterar Meus Dados</a></li>
-                        <li><a href="PaginaClinicas.php">Consultar Clínicas</a></li>
-                        <li><a href="historicoAtendimentos.php">Histórico de Atendimentos</a></li>
-                        <li><button><a href="logar.php"><strong>Sair</strong></a></button></li>
-
-					</ul>
+						 <li><a href="AlteraDadosBasicosPJ.php">Dados básicos</a></li>
+						<li><a href="PacientesFichasDosPacientes.php">Pacientes: Fichas dos Pacientes</a></li>
+						<li><a href="historicoFichasdeAnamnese.php">Fichas de Anamnese</a></li>
+						<li><button><a href="logar.php"><strong>Sair</strong></a></button></li>
+						</ul>
 				</nav>
 			</div>
 		</header>
 		<br>
 		
-        <h3>Clínicas</h3>
+        <h3>Fichas dos Pacientes</h3>
 
         <div>  <!-- ESPAÇO PARA APARIÇÃO DAS CLÍNICAS -->
 

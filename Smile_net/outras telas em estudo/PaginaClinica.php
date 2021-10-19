@@ -53,7 +53,7 @@
 
         <div>
             <button type="submit">
-                <a href="FormularioAnamnese.html">Preencher ficha de anamnese</a>
+                <a href="FormularioAnamnese.php">Preencher ficha de anamnese</a>
             </button>
         </div>
 	</body>

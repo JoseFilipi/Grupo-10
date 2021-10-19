@@ -36,12 +36,12 @@
         <br><br>
 
         <button type="submit">
-            <a href="">Buscar ficha</a> <!--Link para a página de buscar as fichas de anamnese-->
+            <a href="">Buscar ficha</a>
         </button>
         <br><br><br>
 
         <button type="submit">
-            <a href="AlterarDadosPJ.html">Alterar dados da clínica</a> <!--Link para a página de alterar os dados da PJ-->
+            <a href="AlterarDadosPJ.php">Alterar dados da clínica</a>
         </button>
         <br><br>
 
