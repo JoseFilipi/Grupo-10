@@ -44,8 +44,6 @@
     }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -74,11 +72,11 @@
 				
 				<section class="caixa-botoes">
 					<button class="botao-esquerdo">
-						<a href="index.php">Página principal</a>
+						<a href="">Página principal</a>
 					</button>
 	
 					<button class="botao-direito">
-						<a href="PaginaClinicas.php">Procurar clínicas</a>
+						<a href="">Procurar clínicas</a>
 					</button>
 				</section>
 					
@@ -88,7 +86,7 @@
 	
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
 		</footer>  
 	</body>
 </html>
