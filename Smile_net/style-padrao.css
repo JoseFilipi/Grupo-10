@@ -1,0 +1,67 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(245, 245, 247);
+}
+
+/* Cabeçalho */
+header {
+	background: powderblue;
+	padding: 5px 0;
+}
+
+.logo-padrao{
+    width: 200px;
+}
+
+.scroll{
+	background: powderblue;
+	position: fixed; 
+	width: 100%; 
+	top: -50px; 
+	display: block; 
+	z-index: 1
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 25px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	padding: 0 20px;
+    border-left: 2px solid midnightblue;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+/* Fim do cabeçalho */
+
+/* Rodapé */
+footer{
+    background: powderblue;
+    text-align: center;
+    padding: 40px 0;
+}
+.copyright {
+	font-size: 16px;
+	margin: 20px 0 0;
+}
+/* Fim do rodapé */

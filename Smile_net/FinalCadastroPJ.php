@@ -53,7 +53,7 @@
 
 	<body>
 		<header>
-			<a href=""><img src="Imagens/logo2.png" class="logo-padrao" alt="Logo Smile Anamnese"></a>
+			<img src="Imagens/logo2.png" class="logo-padrao" alt="Logo Smile Anamnese">
 		</header>
 
 		<main>
@@ -70,11 +70,12 @@
 				
 				<section class="caixa-botoes">
 					<button class="botao-esquerdo">
-						<a href="">Página principal</a>
+						<a href="areaPrivada_pj.php">Página principal</a>
 					</button>
-	
+
 					<button class="botao-direito">
-						<a href="">Perfil da clínica</a>
+										<!--- Falta colocar o link referente a esse botão, que é a página que a clínica escolhe qual ficha de anamnese ela vai usar --->>
+						<a href="">Fichas de Anamnese</a>
 					</button>
 				</section>
 			</div>
