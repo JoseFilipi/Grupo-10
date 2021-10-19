@@ -33,7 +33,7 @@
         <p>Uma mensagem de confirmação será enviada ao endereço de e-mail cadastrado ao CNPJ acima, assim que a confirmação for feita, você poderá alterar a sua senha.</p>
         
         <button type="submit">
-            <a href="">Mandar e-mail</a> <!--Link para a página de recuperação da senha - a página deve confirmar se o usuário é realemnte do dono do login-->
+            <a href="">Mandar e-mail</a>
         </button>
 
         <br><br><br><br><br><br><br><br><br><br><br>

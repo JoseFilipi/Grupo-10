@@ -42,7 +42,7 @@
 		<fieldset>
 			<div>
 				<button>
-					<a href="">Página principal</a>
+					<a href="index.php">Página principal</a>
 				</button>
 			</div>
 		</fieldset>
