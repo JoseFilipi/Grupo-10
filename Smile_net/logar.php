@@ -1,7 +1,10 @@
 <?php
-
- session_start();
- 
+    session_start();
+    if(isset($_SESSION['msg'])){ 
+        $erro = true;
+    }else{
+        $erro = false;
+    }
  ?>
 
 <!DOCTYPE html>
@@ -16,18 +19,26 @@
 		<link rel="stylesheet" href="style-padrao.css">
         <link rel="stylesheet" href="style-login.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
+        
 		<!-- JS -->
-        <script> 
+        <script type="text/javascript"> 
             function mostrar(id_mostrar, id_ocultar){
                 document.getElementById(id_mostrar).style.display = 'inline-block';
                 document.getElementById(id_ocultar).style.display = 'none';
             }
+            function erro_login(True_ocultar, False_Ocultar){
+                var erro = "<?php echo $erro; ?>";
+                if (erro){
+                    document.getElementById(False_Ocultar).style.display = 'inline-block';
+                    document.getElementById(True_ocultar).style.display = 'none';
+                }
+            }
+            
         </script>
 		
 
 	</head>
-	<body>
+	<body onload="erro_login('vantagem-pf', 'login-pf')">
 		<header class="topo">
 			<div class="caixa">
 				<h1><img src="Imagens/logo2.png" class="logo-padrao"></h1>
@@ -44,13 +55,6 @@
 		</header>
 
         <main>
-            <!-- Essa parte deve ser separada em dois (um para PF e outro para PJ) e colocada em uma parte mais apropriada. -->
-            <?php 
-                if(isset($_SESSION['msg'])){ 
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-                }
-            ?>
             <section>
                 <!-- Foram separados cada item da lista como sendo um bloco de conteúdo-->
                 <ul class="tipo-login">
@@ -74,6 +78,15 @@
                         <form method="POST" action="valida.php">
                             <input type="number" name="cpf" placeholder="CPF">
                             <input type="password" name="senha" placeholder="Senha">
+                            <span id='erro-pf'>
+                                <?php
+                                    if($erro){
+                                        echo $_SESSION['msg'];
+                                        unset($_SESSION['msg']);
+                                    }
+                                ?>
+                            </span>
+                            
                             <a href="EsqueceuSenhaCPF.php" class="esqueceu-senha">Esqueceu a senha?</a>
                             <button class="botao-login" type="submit" name="btnLogin" value="btnLogin">Login</button>
                         </form>
