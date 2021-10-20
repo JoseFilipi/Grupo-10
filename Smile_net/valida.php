@@ -9,7 +9,6 @@ if($btnLogin){
 
 	$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
 	$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-	$_SESSION['msg'] = NULL;
 	if((!empty($cpf)) AND (!empty($senha))){
 		
 		$result_usuario = "SELECT senha FROM cadsa WHERE cpf='$cpf' LIMIT 1";
@@ -21,13 +20,13 @@ if($btnLogin){
 				header("Location: areaPrivada_pf.php");
 
 			} else{
-				$_SESSION['msg'] = "Login e senha incorreto!";
+				$_SESSION['msg'] = "Login e senha incorretos!";
 				header("Location: logar.php");
 				
 			}
 		}
 	}else{
-		$_SESSION['msg'] = "Login e senha incorreto! (vazio)";
+		$_SESSION['msg'] = "Login e senha incorretos! (vazio)";
 		header("Location: logar.php");
 		
 	}

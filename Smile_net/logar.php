@@ -5,6 +5,11 @@
     }else{
         $erro = false;
     }
+    if(isset($_SESSION['msg2'])){ 
+        $erro2 = true;
+    }else{
+        $erro2 = false;
+    }
  ?>
 
 <!DOCTYPE html>
@@ -26,22 +31,28 @@
                 document.getElementById(id_mostrar).style.display = 'inline-block';
                 document.getElementById(id_ocultar).style.display = 'none';
             }
-            function erro_login(True_ocultar, False_Ocultar){
+            function erro_login_pf(){
                 var erro = "<?php echo $erro; ?>";
                 if (erro){
-                    document.getElementById(False_Ocultar).style.display = 'inline-block';
-                    document.getElementById(True_ocultar).style.display = 'none';
+                    document.getElementById('login-pf').style.display = 'inline-block';
+                    document.getElementById('vantagem-pf').style.display = 'none';
                 }
             }
-            
+            function erro_login_pj(){
+                var erro = "<?php echo $erro2; ?>";
+                if (erro){
+                    document.getElementById('login-pj').style.display = 'inline-block';
+                    document.getElementById('vantagem-pj').style.display = 'none';
+                }
+            }
         </script>
 		
 
 	</head>
-	<body onload="erro_login('vantagem-pf', 'login-pf')">
+	<body onload="erro_login_pf() , erro_login_pj()" >
 		<header class="topo">
 			<div class="caixa">
-				<h1><img src="Imagens/logo2.png" class="logo-padrao"></h1>
+				<h1><img src="Imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese"></h1>
 
 				<nav>
 					<ul>
@@ -78,10 +89,10 @@
                         <form method="POST" action="valida.php">
                             <input type="number" name="cpf" placeholder="CPF">
                             <input type="password" name="senha" placeholder="Senha">
-                            <span id='erro-pf'>
+                            <span>
                                 <?php
                                     if($erro){
-                                        echo $_SESSION['msg'];
+                                        echo "{$_SESSION['msg']}";
                                         unset($_SESSION['msg']);
                                     }
                                 ?>
@@ -114,6 +125,14 @@
                         <form method="POST" action="valida2.php">
                             <input type="number" name="cnpj" placeholder="CNPJ">
                             <input type="password" name="senha2" placeholder="Senha">
+                            <span>
+                                <?php
+                                    if($erro2){
+                                        echo "{$_SESSION['msg2']}";
+                                        unset($_SESSION['msg2']);
+                                    }
+                                ?>
+                            </span>
                             <a href="EsqueceuSenhaCNPJ.php" class="esqueceu-senha">Esqueceu a senha?</a>
                             <button class="botao-login" type="submit" name="btnLogin2" value="btnLogin2">Login</button>
                         </form>

@@ -9,7 +9,7 @@ if($btnLogin2){
 
 	$cnpj = filter_input(INPUT_POST, 'cnpj', FILTER_SANITIZE_STRING);
 	$senha = filter_input(INPUT_POST, 'senha2', FILTER_SANITIZE_STRING);
-	
+
 	if((!empty($cnpj)) AND (!empty($senha))){
 		
 		$result_usuario = "SELECT senha FROM clinicas WHERE cnpj='$cnpj' LIMIT 1";
@@ -22,17 +22,17 @@ if($btnLogin2){
 				header("Location: areaPrivada_pj.php");
 
 			} else{
-				$_SESSION['msg'] = "Login e senha incorreto!";
+				$_SESSION['msg2'] = "Login e senha incorretos!";
 				header("Location: logar.php");
 
 			
 			}
 		}
 	}else{
-		$_SESSION['msg'] = "Login e senha incorreto! (vazio)";
+		$_SESSION['msg2'] = "Login e senha incorretos! (vazio)";
 		header("Location: logar.php");
 	}
 }else{
-	$_SESSION['msg'] = "Página não encontrada";
+	$_SESSION['msg2'] = "Página não encontrada";
 	header("Location: logar.php"); 
 }
