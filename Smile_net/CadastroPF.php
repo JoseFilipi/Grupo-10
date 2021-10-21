@@ -7,7 +7,7 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style-padrao.css">
-		<link rel="stylesheet" href="style-cadastro.css">
+		<link rel="stylesheet" href="style-cadastros.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="bootstrap.min.css">
 
