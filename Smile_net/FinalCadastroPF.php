@@ -33,7 +33,7 @@
 
 
    //guardando o restante das variáveis do banco de dados:
-   $result_usuario = "INSERT INTO cadsa (nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto) VALUES ('$nome', '$nascimento', '$rg', '$cpf', '$cep', '$cel', '$email', '$senha2', '$plano', '$numplano', '$nome_final')";
+   $result_usuario = "INSERT INTO pacientes (nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto) VALUES ('$nome', '$nascimento', '$rg', '$cpf', '$cep', '$cel', '$email', '$senha2', '$plano', '$numplano', '$nome_final')";
 
    //condicional para averiguar a presença de erros durante a conexão dos arquivos
    if (mysqli_query($conn, $result_usuario)){ 
