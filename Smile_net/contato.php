@@ -6,36 +6,35 @@ session_start();
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Contato</title>
+		<title>Smile.net - Contato</title>
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style-padrao.css">
+		<link rel="stylesheet" href="style-contato.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="bootstrap.min.css">
 
-		<!--
+		<!-- JS -->
 		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     	<noscript>Javascript de carregamento do Framework Jquery</noscript>
 		<script type="text/javascript" src="js/script.js"></script>
     	<noscript>Javascript de carregamento do jquery do projeto</noscript>
     	<script src="js/swiper-bundle.min.js"></script>
     	<noscript>Javascript de carregamento do jquery do projeto</noscript>
-		-->
 
 	</head>
 	<body>
 		<header class="topo">
 			<div class="caixa">
-
-				<h1><img src="Imagens/logo2.png"></h1>
+				<h1><img src="Imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese"></h1>
 
 				<nav>
 					<ul>
-						<li><a href="index.php">HOME</a></li>
-						<li><a href="Equipe.php">D.S-Equipe 10</a></li>
-						<li><a href="Logar.php">Logar</a></li>
+                        <li><a href="index.php">Home</a></li>
+						<li><a href="Equipe.php">Sobre Nós</a></li>
 						<li><a href="contato.php">Contato</a></li>
+						<li><a href="logar.php">Login</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -119,7 +118,7 @@ session_start();
 
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
 		</footer>
 	
 
