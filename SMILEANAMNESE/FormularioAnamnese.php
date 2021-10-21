@@ -528,7 +528,7 @@
 			<br>
 
 			<button type="submit">
-				<a href="">Enviar ficha</a>
+				<a href="FinalFormAnamnese.php">Enviar ficha</a>
 			</button>
 		</form>
 	</body>

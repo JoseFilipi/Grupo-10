@@ -2,28 +2,63 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
 		<title>Cadastro Pessoa Jurídica</title>
-		<link rel="stylesheet" type="text/css" href="reset.css">
-		<link rel="stylesheet" type="text/css" href="style-cadastro.css" media="screen">
-	</head>
 
+		<!-- CSS -->
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="bootstrap.min.css">
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    	<noscript>Javascript de carregamento do Framework Jquery</noscript>
+		<script type="text/javascript" src="js/script.js"></script>
+    	<noscript>Javascript de carregamento do jquery do projeto</noscript>
+    	<script src="js/swiper-bundle.min.js"></script>
+    	<noscript>Javascript de carregamento do jquery do projeto</noscript>
+    	<!-- JS -->
+		
+	</head>
 	<body>
-		<header>
+		<header class="topo">
 			<div class="caixa">
-				<!-- A imagem do cabeçalho está com o link para a Home, que deverá ser colocado o link correto depois -->
-				<a href="home.html"><img src="Imagens/logo2.png" class="logo-padrao" alt="Logo Smile Anamnese"></a>
+				<h1><img src="Imagens/logo2.png"></h1>
 
 				<nav>
 					<ul>
-					<!-- Aqui tem que colocar os links corretos posteriormente -->
-						<li><a href="home.html">Home</a></li>
-						<li><a href="Contato.html">Contato</a></li>
-						<li><a href="login.html">Login</a></li>
+						<li><a href="index.php">HOME</a></li>
+						<li><a href="Equipe.php">D.S-Equipe 10</a></li>
+						<li><a href="logar.php">Logar</a></li>
+						<li><a href="contato.php">Contato</a></li>
 					</ul>
-				</nav>	
+				</nav>
 			</div>
 		</header>
+
 		<main>
+
+			<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p><a href="CadastroPF.php">Pessoa física</a></p>
+				<p><a href="CadastroPJ.php">Pessoa jurídica</a></p>
+      </div>
+      
+    </div>
+  </div>	
+</div>
 			<div class="caixa-formulario">
 				<section class="cabecalho-formulario">
 					<h1>Cadastro Pessoa Jurídica</h1>
@@ -71,7 +106,7 @@
 					<textarea cols="70" rows="10" class="input-padrao" id="descricao-clinica"></textarea>
 						
 					<button class="botao-enviar" type="submit">
-						<a href="FinalCadastroPJ.html">Enviar</a>
+						<a href="FinalCadastroPJ.php">Enviar</a>
 					</button>
 				</form>
 			</div>
@@ -79,7 +114,7 @@
 
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
 		</footer>
 	</body>
 </html>
