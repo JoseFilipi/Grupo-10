@@ -3,11 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Smile Anamnese</title>
+		<title>Smile.net - Home</title>
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style-padrao.css">
+		<link rel="stylesheet" href="style-index.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="bootstrap.min.css">
 
@@ -24,65 +25,50 @@
 	<body>
 		<header class="topo">
 			<div class="caixa">
-				<h1><img src="Imagens/logo2.png"></h1>
+				<h1><img src="Imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese"></h1>
 
 				<nav>
 					<ul>
-						<li><a href="index.php">HOME</a></li>
-						<li><a href="Equipe.php">D.S-Equipe 10</a></li>
-						<li><a href="logar.php">Logar</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="Equipe.php">Sobre Nós</a></li>
 						<li><a href="contato.php">Contato</a></li>
+						<li><a href="logar.php">Login</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 
-
-
-		<img class="banner" src="Imagens/banner.jpg">
-
 		<main>
-			<!-- Button trigger modal -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <p><a href="CadastroPF.php">Pessoa física</a></p>
-				<p><a href="CadastroPJ.php">Pessoa jurídica</a></p>
-      </div>
-      
-    </div>
-  </div>	
-</div>
+			<section class="carrossel">
+				<div id="slider">
+					<img class="selected" src="Imagens/Logo.jpeg" alt="Image1">
+					<img src="https://draluisapolcaro.com.br/wp-content/uploads/2020/07/Tipos-de-dentes-e-suas-func%CC%A7o%CC%83es-1.jpg" alt="Image2">
+					<img src="https://cdn.xxl.thumbs.canstockphoto.com.br/azul-tools-imagem-rendering-dente-dentista-fundo-3d-banco-de-fotos_csp71894636.jpg" alt="Image3">
+					<img src="https://thumbs.dreamstime.com/z/os-dentes-brancos-saud%C3%A1veis-est%C3%A3o-sorrindo-e-o-dente-com-c%C3%A1rie-%C3%A9-triste-em-ferramentas-verdes-espelho-do-fundo-dentista-da-h-140280036.jpg" alt="Image4">
+				</div>
+				<script src="script.js"></script>
+			</section>
 			<section class="principal">
-				<h2 class="titulo-principal">Smile Anamnese</h2>
+				<img src="Imagens/fundo-home.jpg" class="fundo-home">
+				<div class="conteudo-principal">
+					<h1 class="titulo-principal">Fichas de Anamnese a um <em>clique</em>!</h1>
+					<p>A <strong>Smile Anamnese</strong> traz para as pessoas e clínicas um suporte de pré-atendimento no quesito de melhoria no atendimento e ganho de tempo em pequenas questões de atendimento.</p>
 
-				<img class="utensilios" src="Imagens/utensilios.jpg" alt="">
-		 
-				<p>A nossa central é localizada no coração da cidade de Brasília <strong>Smile Anamnese</strong> traz para as pessoas e clínica um suporte de pré-atendimento no quesito de melhoria no atendimento e ganho de tempo em pequenas questões de atendimento.</p>
+					<p>Sendo é um programa gratuito que visa facilitar o processo, tanto de marcação de uma consulta em uma clínica odontológica, quanto o questionário de anamnese que é necessário preencher antes de qualquer consulta.</p>
+						
+					<p>Através do nosso site você poderá ter acesso a diversas clínicas que estão perto de você e poderá também decidir qual a melhor, com base em informações da clínica, tipos de serviços ofertados e avaliaçãoes de outros pacientes.</p>
 
-				<p> O <strong>Smile Anamnese</strong> é um programa gratuito que visa facilitar o processo tanto de marcação de uma consulta
-					em uma clínica odontológica quanto o questionário de anamnese que é nessesário preencher antes de qualquer consulta.<br>
-					<br>
-					Através do nosso site você poderá ter acesso a diversas clínicas que estão perto de você e poderá também decidir qual a melhor, com base em informações da clínica, tipos de serviços ofertados e avaliaçãoes de outros pacientes.<br>
-					<br>
-					Crie um cadastro agora mesmo e garanta todas as vantagens e facilidades ofertadas pelo programa!
+					<p>Veja agora mesmo as vantagens de cada conta e obtenha as facilidades ofertadas pelo programa!</p>
 
-
-
+					<button>Confira!</button>
+				</div>
+			</section>
+			<section>
 				<p id="missao"><em>Nossa missão é: <strong>"Proporcionar ao cliente um atendimento mais ágil e as clínicas melhor suporte de pré-atendimento"</strong>.</em></p>
-				
+					
 				<p>Oferecemos no nosso site agilidade em pré-inscrição, para futuros atendimentos em clinicas vinculadas.</p>
 			</section>
-
+			
 			<section class="mapa">
 				<h3 class="titulo-principal">Nossa central física - Smile Anamnese - </h3>
 				<p>Nosso estabelecimento está localizado no coração da cidade.</p>
@@ -123,7 +109,7 @@
 
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
 		</footer>
 
 		
