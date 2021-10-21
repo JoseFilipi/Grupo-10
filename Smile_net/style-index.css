@@ -1,7 +1,5 @@
-.titulo-principal {
-	text-align: center;
-	font-size: 2em;
-	margin-top: 0.5em;
+.topo{
+	z-index: 3;
 }
 .carrossel {
     display: none;
@@ -33,6 +31,7 @@
 .principal {
 	position: relative;
     overflow: hidden;
+	padding: 50px 80px;
 }
 .fundo-home{
     position: absolute;
@@ -42,24 +41,69 @@
     opacity: 0.6;
     filter: blur(2px);
 } 
-.conteudo-principal{
+.conteudo-principal, .img-ficha{
     position: relative;
     z-index: 2;
-    width: 940px;
-    margin: 0 auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.conteudo-principal{
+	width: 60%;
+	padding: 0 3em;
+}
+.img-ficha{
+	width: 40%;
+	float: right;
+}
+.img-ficha img{
+	width: 100%;
+	filter: drop-shadow(10px 8px 6px black);
+}
+.titulo-principal {
+	font-size: 2.5em;
+    margin-bottom: 0.8em;
+}
+.titulo-principal em {
+	font-style: italic;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: underline;
 }
 .principal p {
-	margin: 0 0 1em;
+	margin-bottom: 0.5em;
+    font-size: 0.95em;
 }
-
+.principal h2 {
+    font-size: 1.5em;
+    text-align: center;
+	margin: 0.75em 0;
+}
 .principal strong {
 	font-weight: bold;
 }
-
-.principal em {
+.principal em{
+	text-decoration: underline;
 	font-style: italic;
+	font-weight: bold;
 }
-
+.btn-confira {
+    margin: 1em auto 0;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.25em 3em;
+    border: #1465f7 solid;
+	border-radius: 20px;
+    background: none;
+    color: #1465f7;
+    cursor: pointer;
+	transition: 0.3S all;
+}
+.btn-confira:hover{
+	background: #1465f7;
+	color: aliceblue;
+}
 .utensilios {
 	width: 120px;
 	float: left;

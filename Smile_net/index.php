@@ -51,18 +51,18 @@
 			<section class="principal">
 				<img src="Imagens/fundo-home.jpg" class="fundo-home">
 				<div class="conteudo-principal">
-					<h1 class="titulo-principal">Fichas de Anamnese a um <em>clique</em>!</h1>
-					<p>A <strong>Smile Anamnese</strong> traz para as pessoas e clínicas um suporte de pré-atendimento no quesito de melhoria no atendimento e ganho de tempo em pequenas questões de atendimento.</p>
-
-					<p>Sendo é um programa gratuito que visa facilitar o processo, tanto de marcação de uma consulta em uma clínica odontológica, quanto o questionário de anamnese que é necessário preencher antes de qualquer consulta.</p>
-						
-					<p>Através do nosso site você poderá ter acesso a diversas clínicas que estão perto de você e poderá também decidir qual a melhor, com base em informações da clínica, tipos de serviços ofertados e avaliaçãoes de outros pacientes.</p>
-
-					<p>Veja agora mesmo as vantagens de cada conta e obtenha as facilidades ofertadas pelo programa!</p>
-
-					<button>Confira!</button>
+					<h1 class="titulo-principal">Fichas de Anamnese a um <em>clique!</em></h1>
+					<p>A <strong>Smile Anamnese</strong> traz para as pessoas e clínicas um suporte de pré-atendimento no quesito de melhoria no atendimento e ganho de tempo no atendimento ao cliente.</p>
+					<p>Sendo um programa <em>gratuito</em> que visa facilitar o processo, tanto de marcação de uma consulta em uma clínica odontológica, quanto o questionário de anamnese que é necessário preencher antes de qualquer consulta.</p>			
+					<p>Através do nosso site você poderá ter acesso a diversas clínicas que estão perto de você e também decidir qual a melhor, com base em: informações da clínica, tipos de serviços ofertados, avaliaçãoes de outros pacientes e muito mais!</p>
+					<h2>Veja agora mesmo as vantagens de cada conta e obtenha as facilidades ofertadas pelo programa!</h2>
+					<button class="btn-confira">Confira</button>
+				</div>
+				<div class="img-ficha">
+					<img src="Imagens/ficha-anamnese.png" alt="Mão usando ficha de anamnese">
 				</div>
 			</section>
+
 			<section>
 				<p id="missao"><em>Nossa missão é: <strong>"Proporcionar ao cliente um atendimento mais ágil e as clínicas melhor suporte de pré-atendimento"</strong>.</em></p>
 					
