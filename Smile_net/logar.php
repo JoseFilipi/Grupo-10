@@ -24,7 +24,7 @@
 		<link rel="stylesheet" href="style-padrao.css">
         <link rel="stylesheet" href="style-login.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        
+        <link rel="stylesheet" href="bootstrap.min.css">
 		<!-- JS -->
         <script type="text/javascript"> 
             function mostrar(id_mostrar, id_ocultar){
@@ -46,9 +46,8 @@
                 }
             }
         </script>
-		
-
 	</head>
+
 	<body onload="erro_login_pf() , erro_login_pj()" >
 		<header class="topo">
 			<div class="caixa">

@@ -2,25 +2,37 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Cadastro Pessoa Jurídica</title>
+		<title>Cadastro - Pessoa Jurídica</title>
+
+		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="reset.css">
-		<link rel="stylesheet" type="text/css" href="style-cadastro.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="style-padrao.css">
+		<link rel="stylesheet" type="text/css" href="style-cadastro.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="bootstrap.min.css">
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    	<noscript>Javascript de carregamento do Framework Jquery</noscript>
+		<script type="text/javascript" src="js/script.js"></script>
+    	<noscript>Javascript de carregamento do jquery do projeto</noscript>
+    	<script src="js/swiper-bundle.min.js"></script>
+    	<noscript>Javascript de carregamento do jquery do projeto</noscript>
 	</head>
 
 	<body>
-		<header>
+		<header class="topo">
 			<div class="caixa">
-				<!-- A imagem do cabeçalho está com o link para a Home, que deverá ser colocado o link correto depois -->
-				<a href="home.html"><img src="Imagens/logo2.png" class="logo-padrao" alt="Logo Smile Anamnese"></a>
+				<h1><img src="Imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese"></h1>
 
 				<nav>
 					<ul>
-					<!-- Aqui tem que colocar os links corretos posteriormente -->
-						<li><a href="home.html">Home</a></li>
-						<li><a href="Contato.html">Contato</a></li>
-						<li><a href="login.html">Login</a></li>
+                        <li><a href="index.php">Home</a></li>
+						<li><a href="Equipe.php">Sobre Nós</a></li>
+						<li><a href="contato.php">Contato</a></li>
+						<li><a href="logar.php">Login</a></li>
 					</ul>
-				</nav>	
+				</nav>
 			</div>
 		</header>
 		<main>
