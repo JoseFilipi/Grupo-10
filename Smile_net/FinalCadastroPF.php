@@ -1,17 +1,22 @@
 <?php
     
+   //inclusão da conexão com o banco de dados 
    include_once("conexao.php");
+   
 
+   //salvando as informações obtidas no formulário de cadastro em variáveis PHP
    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-   $cnpj = filter_input(INPUT_POST,'cnpj', FILTER_SANITIZE_STRING);
+   $nascimento = date('Y-m-d', strtotime($_POST['nascimento']));
+   $rg = filter_input(INPUT_POST, 'rg', FILTER_SANITIZE_STRING);
+   $cpf = filter_input(INPUT_POST,'cpf', FILTER_SANITIZE_STRING);
    $cep = filter_input(INPUT_POST, 'cep', FILTER_SANITIZE_STRING);
-   $end = filter_input(INPUT_POST, 'endereço', FILTER_SANITIZE_STRING);
    $cel = filter_input(INPUT_POST, 'cel', FILTER_SANITIZE_STRING);
-   $horario = filter_input(INPUT_POST, 'horario', FILTER_SANITIZE_STRING);
    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+   $plano = filter_input(INPUT_POST, 'textoplano', FILTER_SANITIZE_STRING);
+   $numplano = filter_input(INPUT_POST, 'carteirinha', FILTER_SANITIZE_STRING);
    $foto = $_FILES['foto']['name'];
-   $descric = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
+
 
    //criptografia da senha:
    $senha2 = password_hash($senha, PASSWORD_DEFAULT);
@@ -31,7 +36,7 @@
 
 
    //guardando o restante das variáveis do banco de dados:
-   $result_usuario = "INSERT INTO clinicas (nome, cnpj, cep, endereco, telefone, horariofunc, email, senha, logo, descricao) VALUES ('$nome', '$cnpj', '$cep', '$end', '$cel', '$horario', '$email', '$senha2', '$nome_final', '$descric')";
+   $result_usuario = "INSERT INTO cadsa (nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto) VALUES ('$nome', '$nascimento', '$rg', '$cpf', '$cep', '$cel', '$email', '$senha2', '$plano', '$numplano', '$nome_final')";
 
    //condicional para averiguar a presença de erros durante a conexão dos arquivos
    if (mysqli_query($conn, $result_usuario)){ 
@@ -55,17 +60,17 @@
 		<header>
 			<a href=""><img src="Imagens/logo2.png" class="logo-padrao" alt="Logo Smile Anamnese"></a>
 		</header>
-
+		
 		<main>
 			<div class="caixa">
 				<section class="texto-principal">
 					<h1>Seu cadastro foi realizado com sucesso!</h1>
-					<h2>Nós, da equipe <strong>Smile Anamnese</strong> estamos muito felizes em ter sua clínica como uma parceira do nosso sistema. Aproveite todos os benefícios que ofertamos!</h2>
+					<h2>Nós, da equipe da <strong>Smile Anamnese</strong> ficamos muito felizes por sua participação no nosso software, aproveite todos os benefícios que ofertamos.</h2>
 				</section>
 
 				<section class="aviso-login">
 					<h3>⚠ Atenção! ⚠</h3>
-					<p>Não se esqueça,<br>seu usuário para login é o número do <em>CNPJ da clínica</em>.</p>
+					<p>Não se esqueça,<br>seu usuário para login é o seu <em>número de CPF</em>.</p>
 				</section>
 				
 				<section class="caixa-botoes">
@@ -74,15 +79,17 @@
 					</button>
 	
 					<button class="botao-direito">
-						<a href="">Perfil da clínica</a>
+						<a href="logar.php">Procurar clínicas</a>
 					</button>
 				</section>
+					
 			</div>
+
 		</main>
-		
+	
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
-		</footer>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
+		</footer>  
 	</body>
 </html>

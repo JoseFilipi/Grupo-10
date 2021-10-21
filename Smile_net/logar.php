@@ -1,5 +1,5 @@
 <?php
-
+  //Inclusão da sessão 
  session_start();
  
  ?>
@@ -66,10 +66,17 @@
         <br><br>
 
         <?php 
-
+           //Caso haja erros relacionados ao login a mensagem irá ser ativada
           if(isset($_SESSION['msg'])){ 
            echo $_SESSION['msg'];
            unset($_SESSION['msg']);
+           }
+          ?>
+          <?php 
+
+          if(isset($_SESSION['msg2'])){ 
+           echo $_SESSION['msg2'];
+           unset($_SESSION['msg2']);
            }
           ?>
 
