@@ -11,7 +11,7 @@ if($btnLogin){
 	$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 	if((!empty($cpf)) AND (!empty($senha))){
 		
-		$result_usuario = "SELECT senha FROM cadsa WHERE cpf='$cpf' LIMIT 1";
+		$result_usuario = "SELECT senha FROM pacientes WHERE cpf='$cpf' LIMIT 1";
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		if($resultado_usuario){
 			$row_usuario = mysqli_fetch_assoc($resultado_usuario);

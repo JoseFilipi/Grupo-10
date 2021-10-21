@@ -74,8 +74,8 @@
 					</button>
 
 					<button class="botao-direito">
-										<!--- Falta colocar o link referente a esse botão, que é a página que a clínica escolhe qual ficha de anamnese ela vai usar --->>
-						<a href="">Fichas de Anamnese</a>
+										<!--- Falta colocar o link referente a esse botão, que é a página que a clínica escolhe qual ficha de anamnese ela vai usar --->
+						<a>Fichas de Anamnese</a>
 					</button>
 				</section>
 			</div>
