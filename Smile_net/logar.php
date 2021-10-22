@@ -10,7 +10,7 @@
     }else{
         $erro2 = false;
     }
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -63,7 +63,6 @@
 				</nav>
 			</div>
 		</header>
-
         <main>
             <section>
                 <!-- Foram separados cada item da lista como sendo um bloco de conteúdo-->

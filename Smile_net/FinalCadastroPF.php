@@ -1,6 +1,10 @@
 <?php
     
+   //inclusão da conexão com o banco de dados 
    include_once("conexao.php");
+   
+
+   //salvando as informações obtidas no formulário de cadastro em variáveis PHP
 
    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
    $nascimento = date('Y-m-d', strtotime($_POST['nascimento']));
@@ -10,7 +14,7 @@
    $cel = filter_input(INPUT_POST, 'cel', FILTER_SANITIZE_STRING);
    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-    $plano = filter_input(INPUT_POST, 'textoplano', FILTER_SANITIZE_STRING);
+   $plano = filter_input(INPUT_POST, 'textoplano', FILTER_SANITIZE_STRING);
    $numplano = filter_input(INPUT_POST, 'carteirinha', FILTER_SANITIZE_STRING);
    $foto = $_FILES['foto']['name'];
 
@@ -33,6 +37,7 @@
 
 
    //guardando o restante das variáveis do banco de dados:
+
    $result_usuario = "INSERT INTO pacientes (nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto) VALUES ('$nome', '$nascimento', '$rg', '$cpf', '$cep', '$cel', '$email', '$senha2', '$plano', '$numplano', '$nome_final')";
 
    //condicional para averiguar a presença de erros durante a conexão dos arquivos
@@ -72,16 +77,14 @@
 				
 				<section class="caixa-botoes">
 					<button class="botao-esquerdo">
-						<a href="areaPrivada_pf.php">Página principal</a>
+						<a href="index.php">Página principal</a>
 					</button>
 	
 					<button class="botao-direito">
-						<a href="PaginaClinicas.php">Procurar clínicas</a>
+						<a href="logar.php">Procurar clínicas</a>
 					</button>
-				</section>
-					
+				</section>	
 			</div>
-
 		</main>
 	
 		<footer>

@@ -89,12 +89,5 @@
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
 			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
 		</footer>
-
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-    	<noscript>Javascript de carregamento do Framework Bootstrap</noscript>
-    	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-
-
-
 	</body>
 </html>
