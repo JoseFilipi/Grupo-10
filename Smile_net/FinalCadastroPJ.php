@@ -53,7 +53,7 @@
 
 	<body>
 		<header>
-			<a href=""><img src="Imagens/logo2.png" class="logo-padrao" alt="Logo Smile Anamnese"></a>
+			<img src="Imagens/logo2.png" class="logo-padrao" alt="Logo Smile Anamnese">
 		</header>
 
 		<main>

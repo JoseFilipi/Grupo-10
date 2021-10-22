@@ -7,7 +7,7 @@ session_start();
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Área privada_pj</title>
+		<title>Área Privada - Pessoa Jurídica</title>
 
 		<!-- CSS -->		<!-- VÁRIOS HREF'S -->
 		<link rel="stylesheet" href="reset.css">

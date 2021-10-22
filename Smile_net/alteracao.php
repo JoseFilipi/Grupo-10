@@ -8,7 +8,7 @@
     $cpf = $_SESSION['cpf'];
     
     //Inclusão da conexão com o banco de dados e coleta de todas as informações na mesma linha do cpf salvo na variável acima
-    $result_usuario = "SELECT * FROM cadsa WHERE cpf='$cpf'";
+    $result_usuario = "SELECT * FROM pacientes WHERE cpf='$cpf'";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
     $row_usuario = mysqli_fetch_assoc($resultado_usuario);
     $id= $row_usuario['id']; //capturando o id da tabela onde cpf é igual ao fornecido no login
@@ -39,7 +39,7 @@
   move_uploaded_file($_FILES['foto']['tmp_name'], $_UP['pasta']. $nome_final);
   
   
-  $result_usuario = "UPDATE cadsa SET nome='$nome', rg='$rg', cep='$cep', telefone='$cel', email='$email', plano='$plano', numplano='$numplano', foto='$nome_final' WHERE id = '$id'";
+  $result_usuario = "UPDATE pacientes SET nome='$nome', rg='$rg', cep='$cep', telefone='$cel', email='$email', plano='$plano', numplano='$numplano', foto='$nome_final' WHERE id = '$id'";
   $resultado_usuario = mysqli_query($conn, $result_usuario);
   
   header("Location: AlterarDadosPF.php");
