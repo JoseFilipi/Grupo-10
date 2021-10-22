@@ -19,6 +19,7 @@ if($btnLogin2){
 
 		//Caso ambos campos estejam preenchidos será feita a busca dos dados presentes na mesma linha do banco que possui cpf indicado no login
 		$result_usuario = "SELECT nome, cnpj, cep, endereco, telefone, horariofunc, email, senha, logo, descricao FROM clinicas WHERE cnpj='$cnpj' LIMIT 1";
+
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		if($resultado_usuario){
 			$row_usuario = mysqli_fetch_assoc($resultado_usuario);
@@ -39,14 +40,12 @@ if($btnLogin2){
 				header("Location: areaPrivada_pj.php");
 
 			} else{
-				$_SESSION['msg2'] = "Login e senha incorreto!";
+				$_SESSION['msg2'] = "Login e senha incorretos!";
 				header("Location: logar.php");
-
-			
 			}
 		}
 	}else{
-		$_SESSION['msg2'] = "Login e senha incorreto! (vazio)";
+		$_SESSION['msg2'] = "Login e senha incorretos! (vazio)";
 		header("Location: logar.php");
 	}
 }else{

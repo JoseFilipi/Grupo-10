@@ -6,7 +6,7 @@
     
     //Inclusão da conexão com o banco de dados e coleta de todas as informações na mesma linha do cpf salvo na variável acima
     include_once("conexao.php");
-    $result_usuario = "SELECT * FROM cadsa WHERE cpf='$cpf'";
+    $result_usuario = "SELECT * FROM pacientes WHERE cpf='$cpf'";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
     $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>
@@ -25,6 +25,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="bootstrap.min.css">
 
+		<!-- JS -->
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    	<noscript>Javascript de carregamento do Framework Jquery</noscript>
+		<script type="text/javascript" src="js/script.js"></script>
+    	<noscript>Javascript de carregamento do jquery do projeto</noscript>
+    	<script src="js/swiper-bundle.min.js"></script>
+    	<noscript>Javascript de carregamento do jquery do projeto</noscript>
+		<!-- JS -->
     </head>
 
     <body>
@@ -73,11 +81,13 @@
 
                 E-mail:<br>
                 <input type="email" name="email" value="<?php echo $row_usuario['email']; ?>"><br><br>
+
                 <strong>Não se esqueça de ter certeza que você tem acesso a este e-mail, pois caso você perca sua senha, será a partir dele que o seu acesso será reconcedido!</strong>
                 <br><br>
 
                 Confirme o e-mail:<br>
                 <input type="email" name="emailconf">
+
                 <br><br>
 
                 <strong>Para alterar sua senha, será necessário entrar na área de login e ir em "esqueceu a senha"; assim será enviado um e-mail para você, esse processo é devido uma maior segurança.</strong>
@@ -87,6 +97,7 @@
                 <input type="radio" name="plano" value="sim">Sim
                 <input type="radio" name="plano" value="não">Não
                 <br><br>
+				
                 <input type="text" name="textoplano" value="<?php echo $row_usuario['plano']; ?>">
                 <br><br>
                 <input type="text" name="carteirinha" value="<?php echo $row_usuario['numplano']; ?>">
@@ -105,7 +116,6 @@
                 <input type="submit" name="alterarbtn" value="Alterar dados">
 
             </form>
-
         </main>
 
         <footer>

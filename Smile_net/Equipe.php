@@ -7,7 +7,8 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style-padrao.css">
+		<link rel="stylesheet" href="style-equipe.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="bootstrap.min.css">
 
@@ -24,14 +25,14 @@
 	<body>
 		<header class="topo">
 			<div class="caixa">
-				<h1><img src="Imagens/logo2.png"></h1>
+				<h1><img src="Imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese"></h1>
 
 				<nav>
 					<ul>
-						<li><a href="index.php">HOME</a></li>
-						<li><a href="Equipe.php">D.S-Equipe 10</a></li>
-						<li><a href="logar.php">Logar</a></li>
+                        <li><a href="index.php">Home</a></li>
+						<li><a href="Equipe.php">Sobre Nós</a></li>
 						<li><a href="contato.php">Contato</a></li>
+						<li><a href="logar.php">Login</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -86,14 +87,7 @@
 		</main>
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
 		</footer>
-
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-    	<noscript>Javascript de carregamento do Framework Bootstrap</noscript>
-    	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-
-
-
 	</body>
 </html>

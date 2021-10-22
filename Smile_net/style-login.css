@@ -1,0 +1,133 @@
+.tipo-login{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+.escolha-login, .login{
+    vertical-align: top;
+    width: 46%;
+    text-align: center;
+    margin: 0 1.5%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.escolha-login{
+    display: inline-block;
+}
+.escolha-login h2{
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+.login{
+    display: none;
+}
+.login input {
+    display: block;
+    margin: 0 auto 1em;
+    width: 90%;
+    padding: 8px;
+    font-size: 1em;
+}
+.login h2{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+.login h3 {
+    margin-bottom: 1em;
+    font-size: 13px;
+}
+.login p {
+    margin: 1.25em 0;
+    font-weight: bold;
+}
+.img-login{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin: 0.5em 0;
+}
+.vantagens li{
+    font-weight: bold;
+    font-style: italic;
+    padding: 0.5em 0;
+    list-style: inside circle;
+}
+
+/* Botões e Links*/
+.botao-login {
+    margin: 0.5em 0;
+    width: 50%;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+    background: powderblue;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1S all;
+}
+.botao-conta{
+    margin-top: 10px;
+    padding: 1em 2em;
+    font-size: 1em;
+    background: powderblue;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1S all;
+}
+.botao-login:hover,.botao-conta:hover{
+    background: cornflowerblue;
+}
+
+.esqueceu-senha {
+    display: table;
+    text-decoration: none;
+    text-align: left;
+    color: cornflowerblue;
+    font-weight: bold;
+    padding: 0.75em 9.42px;
+    transition: 0.2S all;
+}
+.esqueceu-senha:hover{
+    text-decoration: underline;
+    background: #b0e0e647;
+    border-radius: 20px;
+}
+
+.botao-cadastrar{
+    color: #616467;
+    background: none;
+    border: #616467 solid 2px;
+    border-radius: 500px;
+    font-size: 1.5em;
+    padding: 0.4em 3em;
+    cursor: pointer;
+    transition: 0.3S all;
+}
+.botao-cadastrar:hover{
+    background: #616467;
+    color: white;
+}
+
+.botao-voltar{
+    display: block;
+    background: none;
+    border: none;
+    margin-right: auto;
+    margin-left: 0;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    color: cornflowerblue;
+    transition: 0.25S all;
+}
+.botao-voltar:hover{
+    color: rgb(128, 166, 238);
+    text-decoration: underline;
+}

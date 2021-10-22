@@ -1,13 +1,19 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Contato</title>
+		<title>Smile.net - Contato</title>
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style-padrao.css">
+		<link rel="stylesheet" href="style-contato.css">
+
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="bootstrap.min.css">
 
@@ -18,60 +24,75 @@
     	<noscript>Javascript de carregamento do jquery do projeto</noscript>
     	<script src="js/swiper-bundle.min.js"></script>
     	<noscript>Javascript de carregamento do jquery do projeto</noscript>
-		<!-- JS -->
-
 	</head>
 	<body>
 		<header class="topo">
 			<div class="caixa">
-				<h1><img src="Imagens/logo2.png"></h1>
+				<h1><img src="Imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese"></h1>
 
 				<nav>
 					<ul>
-						<li><a href="index.php">HOME</a></li>
-						<li><a href="Equipe.php">D.S-Equipe 10</a></li>
-						<li><a href="Logar.php">Logar</a></li>
+                        <li><a href="index.php">Home</a></li>
+						<li><a href="Equipe.php">Sobre Nós</a></li>
 						<li><a href="contato.php">Contato</a></li>
+						<li><a href="logar.php">Login</a></li>
 					</ul>
 				</nav>
 			</div>
-		</header>
+		</header>	
+<!-------------------------------------------------contato---------------------------------------------------->
 
+		<?php
+		if(isset($_SESSION['msg'])){
+			echo $_SESSION['msg'];
+			unset($_SESSION['msg']);
+		}
+		?>
+
+<!-------------------------------------------------contato---------------------------------------------------->														<!--processa.php--->
 		<main>
-			<form class="contato">
-				<label for="nomesobrenome">Nome completo</label>
-				<input type="text" id="nomesobrenome" class="input-padrao" required>
+			<form class="contato" method="POST" action="processa.php">
+				
+				<label> Nome completo</label>
+				<input type="text" name="nomesobrenome" placeholder="digite nome e sobrenome" class="input-padrao" required>
 
-				<label for="email">E-mail</label>
-				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+				<label>E-mail</label>
+				<input type="email" name="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
 
-				<label for="telefone">Número de telefone</label>
-				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+				<label >Número de telefone</label>
+				<input type="telefone" name="telefone" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
 
-				<label for="mensagem">Mensagem</label>
-				<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+				<label >Mensagem</label>
+				<textarea cols="70" rows="3" name="mensagem" id="mensagem" class="input-padrao" required></textarea>
 
-				<fieldset>
-					<legend>Infome a melhor forma para entrarmos em contato?</legend>
-					<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> E-mail</label>
-					
-					<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone"> por chamada Telefônica</label>
-					
-					<label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked> contato via WhatsApp</label>
-				</fieldset>
 
-				<fieldset>
-					<legend>E qual o horário mais adequado para falar conosco?</legend>
-					<select>
-						<option>Manhã</option>
-						<option>Tarde</option>
-						<option>Noite</option>
-					</select>
-				</fieldset>
 
-				<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+				<label><legend>Infome a melhor forma para entrarmos em contato?</legend></label>
+				1 - WhatsApp;<br>
+				2 - Chamada Telefônica;<br>
+				3 - E-mail.<br>
+				<textarea cols="70" rows="1" name="forma" id="mensagem" class="input-padrao" required></textarea>
+				
 
-				<input type="submit" value="Enviar formulário" class="enviar">
+
+				<label><legend>E qual o horário mais adequado para falar conosco?</legend></label>
+				1 - Manhã;<br>
+				2 - Tarde;<br>
+				3 - Noite.<br>
+				<input type="text" name="horario" placeholder="digite 1, 2 ou todas as 03 opções" class="input-padrao" required>
+
+			
+
+				<label><legend>Gostaria de receber nossas novidades por email?</legend></label>
+				1 - Sim;<br>
+				2 - Não;<br>
+				<input type="text" name="receber" placeholder="digite 1 ou 2 " class="input-padrao" required>
+
+
+				<!--<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>-->
+
+
+				<input type="submit" name="Cadastrar" value="Cadastrar" class="enviar">
 			</form>
 
 			<table class="horario">
@@ -96,9 +117,7 @@
 
 		<footer>
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
-			<p class="copyright"> &copy; Copyright Smile Anamnese - UnB/FGA - GAMA/DF- 2021</p>
+			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
 		</footer>
-	
-
 	</body>
 </html>

@@ -21,7 +21,7 @@ if($btnLogin){
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		if($resultado_usuario){
 			$row_usuario = mysqli_fetch_assoc($resultado_usuario);
-			
+
 			//caso a senha digitada seja igual a senha presente no banco as informações que foram resgatadas são salvas em variáveis globais, que podem ser compartilhadas entre páginas .php através da função session_start()
 			if(password_verify($senha, $row_usuario['senha'])){
 				$_SESSION['nome'] = $row_usuario['nome'];
@@ -39,14 +39,14 @@ if($btnLogin){
 				header("Location: areaPrivada_pf.php");
 
 			} else{
-				$_SESSION['msg'] = "Login e senha incorreto!";
+				$_SESSION['msg'] = "Login e senha incorretos!";
 				header("Location: logar.php");
 
 			
 			}
 		}
 	}else{
-		$_SESSION['msg'] = "Login e senha incorreto! (vazio)";
+		$_SESSION['msg'] = "Login e senha incorretos! (vazio)";
 		header("Location: logar.php");
 	}
 }else{

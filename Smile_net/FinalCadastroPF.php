@@ -5,6 +5,7 @@
    
 
    //salvando as informações obtidas no formulário de cadastro em variáveis PHP
+
    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
    $nascimento = date('Y-m-d', strtotime($_POST['nascimento']));
    $rg = filter_input(INPUT_POST, 'rg', FILTER_SANITIZE_STRING);
@@ -36,7 +37,8 @@
 
 
    //guardando o restante das variáveis do banco de dados:
-   $result_usuario = "INSERT INTO cadsa (nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto) VALUES ('$nome', '$nascimento', '$rg', '$cpf', '$cep', '$cel', '$email', '$senha2', '$plano', '$numplano', '$nome_final')";
+
+   $result_usuario = "INSERT INTO pacientes (nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto) VALUES ('$nome', '$nascimento', '$rg', '$cpf', '$cep', '$cel', '$email', '$senha2', '$plano', '$numplano', '$nome_final')";
 
    //condicional para averiguar a presença de erros durante a conexão dos arquivos
    if (mysqli_query($conn, $result_usuario)){ 
@@ -81,10 +83,8 @@
 					<button class="botao-direito">
 						<a href="logar.php">Procurar clínicas</a>
 					</button>
-				</section>
-					
+				</section>	
 			</div>
-
 		</main>
 	
 		<footer>
