@@ -6,7 +6,7 @@
     
     //Inclusão da conexão com o banco de dados e coleta de todas as informações na mesma linha do cpf salvo na variável acima
     include_once("conexao.php");
-    $result_usuario = "SELECT * FROM cadsa WHERE cpf='$cpf'";
+    $result_usuario = "SELECT * FROM pacientes WHERE cpf='$cpf'";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
     $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>

@@ -17,7 +17,7 @@ if($btnLogin){
 	if((!empty($cpf)) AND (!empty($senha))){
 		
 		//Caso ambos campos estejam preenchidos será feita a busca dos dados presentes na mesma linha do banco que possui cpf indicado no login
-		$result_usuario = "SELECT nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto FROM cadsa WHERE cpf='$cpf' LIMIT 1";
+		$result_usuario = "SELECT nome, nascimento, rg, cpf, cep, telefone, email, senha, plano, numplano, foto FROM pacientes WHERE cpf='$cpf' LIMIT 1";
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		if($resultado_usuario){
 			$row_usuario = mysqli_fetch_assoc($resultado_usuario);
