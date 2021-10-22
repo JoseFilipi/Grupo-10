@@ -70,12 +70,11 @@
 				
 				<section class="caixa-botoes">
 					<button class="botao-esquerdo">
-						<a href="areaPrivada_pj.php">Página principal</a>
+						<a href="index.php">Página principal</a>
 					</button>
-
+	
 					<button class="botao-direito">
-										<!--- Falta colocar o link referente a esse botão, que é a página que a clínica escolhe qual ficha de anamnese ela vai usar --->
-						<a>Fichas de Anamnese</a>
+						<a href="logar.php">Perfil da clínica</a>
 					</button>
 				</section>
 			</div>

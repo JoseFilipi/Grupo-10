@@ -1,3 +1,16 @@
+<?php
+    //Inclusão da sessão 
+    session_start();
+    //salvando cpf em uma variável comum para buscar dados no banco através da SQL
+    $cpf = $_SESSION['cpf'];
+    
+    //Inclusão da conexão com o banco de dados e coleta de todas as informações na mesma linha do cpf salvo na variável acima
+    include_once("conexao.php");
+    $result_usuario = "SELECT * FROM pacientes WHERE cpf='$cpf'";
+    $resultado_usuario = mysqli_query($conn, $result_usuario);
+    $row_usuario = mysqli_fetch_assoc($resultado_usuario);
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -49,38 +62,32 @@
 
             Dados relativos ao CPF:
 
-            <form>
+            <form method="POST" action="alteracao.php" enctype="multipart/form-data"> 
                 Nome completo:<br>
-                <input type="text" name="nome">
-                <br><br>
-
-                Data de nascimento:<br>
-                <input type="text" name="nascimento" placeholder="00/00/0000">
-                <br><br>
-
-                Data de nascimento:<br>
-                <input type="text" name="nascimento" placeholder="00/00/0000">
+                <input type="text" name="nome" value="<?php echo $row_usuario['nome']; ?>">
                 <br><br>
 
                 RG:<br>
-                <input type="text" name="rg">
+                <input type="text" name="rg" value="<?php echo $row_usuario['rg']; ?>">
                 <br><br>
 
                 CEP:<br>
-                <input type="text" name="cep" placeholder="00000-000">
+                <input type="text" name="cep" placeholder="00000-000" value="<?php echo $row_usuario['cep']; ?>">
                 <br><br>
 
                 Número de celular:<br>
-                <input type="text" name="cel" placeholder="(00) 00000-0000">
+                <input type="text" name="cel" placeholder="(00) 00000-0000" value="<?php echo $row_usuario['telefone']; ?>">
                 <br><br>
 
                 E-mail:<br>
-                <input type="text" name="email"><br><br>
+                <input type="email" name="email" value="<?php echo $row_usuario['email']; ?>"><br><br>
+
                 <strong>Não se esqueça de ter certeza que você tem acesso a este e-mail, pois caso você perca sua senha, será a partir dele que o seu acesso será reconcedido!</strong>
                 <br><br>
 
                 Confirme o e-mail:<br>
-                <input type="text" name="emailconf">
+                <input type="email" name="emailconf">
+
                 <br><br>
 
                 <strong>Para alterar sua senha, será necessário entrar na área de login e ir em "esqueceu a senha"; assim será enviado um e-mail para você, esse processo é devido uma maior segurança.</strong>
@@ -90,22 +97,25 @@
                 <input type="radio" name="plano" value="sim">Sim
                 <input type="radio" name="plano" value="não">Não
                 <br><br>
-                <input type="text" name="textoplano" placeholder="Se sim, qual?">
+				
+                <input type="text" name="textoplano" value="<?php echo $row_usuario['plano']; ?>">
                 <br><br>
-                <input type="text" name="carteirinha" placeholder="Número da carteirinha">
+                <input type="text" name="carteirinha" value="<?php echo $row_usuario['numplano']; ?>">
                 <br><br>
 
-                Adicione uma nova foto ao perfil, ou então mande o mesmo arquivo de antes (opcional)<br><br>
-                <img src="imagens/avatar.png" width="100">
+                Altere afoto de perfil(opcional)<br><br>
+                <img src="fotoperfil/<?php echo $row_usuario['foto']; ?>" width="200">
                 <br><br>
                 <input type="file" name="foto">
-            </form>
-                
-            <button type="submit">
-                <a href="">Concluir atualização de dados</a>
-            </button>
-            <br><br>
+                <br><br>
 
+                Confirme sua senha para validar a alteração:<br>
+                <input type="password" name="senha">
+                <br>
+
+                <input type="submit" name="alterarbtn" value="Alterar dados">
+
+            </form>
         </main>
 
         <footer>

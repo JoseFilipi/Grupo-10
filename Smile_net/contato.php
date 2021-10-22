@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -12,6 +13,7 @@ session_start();
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style-padrao.css">
 		<link rel="stylesheet" href="style-contato.css">
+
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="bootstrap.min.css">
 
@@ -22,7 +24,6 @@ session_start();
     	<noscript>Javascript de carregamento do jquery do projeto</noscript>
     	<script src="js/swiper-bundle.min.js"></script>
     	<noscript>Javascript de carregamento do jquery do projeto</noscript>
-
 	</head>
 	<body>
 		<header class="topo">
@@ -38,8 +39,7 @@ session_start();
 					</ul>
 				</nav>
 			</div>
-		</header>
-		
+		</header>	
 <!-------------------------------------------------contato---------------------------------------------------->
 
 		<?php
@@ -49,8 +49,7 @@ session_start();
 		}
 		?>
 
-<!-------------------------------------------------contato---------------------------------------------------->
-																	<!--processa.php--->
+<!-------------------------------------------------contato---------------------------------------------------->														<!--processa.php--->
 		<main>
 			<form class="contato" method="POST" action="processa.php">
 				
@@ -120,7 +119,5 @@ session_start();
 			<img src="imagens/logo2.png" class="logo-padrao" alt="logo Smile Anamnese">
 			<p class="copyright"> &copy; Copyright Smile Anamnese - 2021</p>
 		</footer>
-	
-
 	</body>
 </html>
